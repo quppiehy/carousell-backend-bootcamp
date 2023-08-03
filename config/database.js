@@ -1,11 +1,16 @@
-require('dotenv').config()
+require("dotenv").config();
 
 module.exports = {
   development: {
-    username: process.env.DB_USERNAME,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    host: process.env.DB_HOST,
-    dialect: process.env.DB_DIALECT,
+    username: process.env.REACT_APP_DB_USERNAME,
+    password: process.env.REACT_APP_DB_PASSWORD,
+    database: process.env.REACT_APP_DB_NAME,
+    port: process.env.REACT_APP_DB_PORT,
+    host: process.env.REACT_APP_DB_HOST,
+    dialect: process.env.REACT_APP_DB_DIALECT,
+    dialectOptions: {
+      useUTC: false,
+    },
+    timezone: "+08:00",
   },
 };
